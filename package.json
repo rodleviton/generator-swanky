@@ -1,6 +1,7 @@
 {
   "name": "generator-swanky",
-  "description": "A most elegant and unopinionated documentation generator",
+  "version": "0.0.0-semantically-released",
+  "description": "A most elegant and unopinionated documentation framework",
   "homepage": "",
   "author": {
     "name": "Rod Leviton",
