@@ -1,0 +1,41 @@
+---
+title                   : <%= name %>
+source                  : <%= source %>
+output                  : <%= output %>
+
+sections                :
+  - title               : Overview
+    content             : ./<%= source %>/content/overview.md
+    layout              : ./<%= source %>/templates/layouts/default-layout.hbs
+
+  - title               : Components
+    content             : ./<%= source %>/content/components.md
+    layout              : ./<%= source %>/templates/layouts/components-layout.hbs
+    processor           : 
+      ngDocs            :
+        pattern         : ./node_modules/library/components/**/*.js
+        template        : ./<%= source %>/templates/component.hbs
+
+  - title               : Patterns
+    content             : ./<%= source %>/content/patterns.md
+    layout              : ./<%= source %>/templates/layouts/default.hbs
+    sub-sections        :
+      - title           : Typography
+        content         : ./<%= source %>/content/patterns/typography/**/*.html
+        layout          : ./<%= source %>/templates/layouts/default.hbs
+
+      - title           : Forms
+        content         : ./<%= source %>/content/patterns/forms/**/*.html
+        layout          : ./<%= source %>/templates/layouts/default.hbs
+
+      - title           : Buttons
+        content         : ./<%= source %>/content/patterns/buttons/**/*.html
+        layout          : ./<%= source %>/templates/layouts/default.hbs
+        processor       : 
+          kss           :
+            pattern       : ./node_modules/library/styles/**/*.css
+            template      : ./<%= source %>/templates/pattern.hbs
+
+  - title               : Accessibility
+    content             : ./<%= source %>/content/accessibility.md
+...

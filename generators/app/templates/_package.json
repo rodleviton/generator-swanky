@@ -1,0 +1,12 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "swanky": "^1.1"
+  }
+}

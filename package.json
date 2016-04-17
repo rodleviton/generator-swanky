@@ -1,0 +1,75 @@
+{
+  "name": "generator-swanky",
+  "description": "A most elegant and unopinionated documentation generator",
+  "homepage": "",
+  "author": {
+    "name": "Rod Leviton",
+    "email": "rod@rodleviton.com",
+    "url": "rodleviton.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.22.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "yeoman-test": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "codecov.io": "0.1.6",
+    "cz-conventional-changelog": "1.1.5",
+    "cz-customizable": "3.1.0",
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.10.0",
+    "istanbul": "^1.0.0-alpha.2",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0",
+    "semantic-release": "^4.3.5",
+    "validate-commit-msg": "2.6.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodleviton/generator-swanky.git"
+  },
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp",
+    "check-coverage": "istanbul check-coverage --statements 50 --branches 50 --functions 50 --lines 50",
+    "report-coverage": "cat ./coverage/coverage-final.json | codecov",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "license": "MIT",
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test && npm run check-coverage && exact-semver",
+      "commit-msg": "validate-commit-msg"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  }
+}
