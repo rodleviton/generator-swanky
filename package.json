@@ -2,7 +2,6 @@
   "name": "generator-swanky",
   "version": "0.0.0-semantically-released",
   "description": "A most elegant and unopinionated documentation framework",
-  "homepage": "",
   "author": {
     "name": "Rod Leviton",
     "email": "rod@rodleviton.com",
@@ -31,6 +30,7 @@
     "eslint-config-xo-space": "^0.10.0",
     "exact-semver": "1.2.0",
     "istanbul": "^1.0.0-alpha.2",
+    "ghooks": "1.2.1",
     "gulp": "^3.9.0",
     "gulp-eslint": "^2.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
