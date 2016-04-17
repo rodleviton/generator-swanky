@@ -17,7 +17,7 @@
   "dependencies": {
     "chalk": "1.0.0",
     "mkdirp": "0.5.1",
-    "yeoman-generator": "^0.22.5"
+    "yeoman-generator": "0.22.5"
   },
   "devDependencies": {
     "codecov.io": "0.1.6",
@@ -47,7 +47,7 @@
   "license": "MIT",
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test && npm run check-coverage && exact-semver",
+      "pre-commit": "npm run test:single && npm run check-coverage && exact-semver",
       "commit-msg": "validate-commit-msg"
     },
     "commitizen": {
