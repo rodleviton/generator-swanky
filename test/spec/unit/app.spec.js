@@ -1,6 +1,7 @@
 'use strict';
-// var path = require('path');
+var path = require('path');
 var assert = require('yeoman-assert');
+var app = require(path.resolve('generators/app'));
 // var helpers = require('yeoman-test');
 
 describe('generator-swanky:app', function () {

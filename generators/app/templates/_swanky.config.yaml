@@ -33,8 +33,8 @@ sections                :
         layout          : ./<%= source %>/templates/layouts/default.hbs
         processor       : 
           kss           :
-            pattern       : ./node_modules/library/styles/**/*.css
-            template      : ./<%= source %>/templates/pattern.hbs
+            pattern     : ./node_modules/library/styles/**/*.css
+            template    : ./<%= source %>/templates/pattern.hbs
 
   - title               : Accessibility
     content             : ./<%= source %>/content/accessibility.md
