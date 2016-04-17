@@ -41,7 +41,7 @@
     "test": "mocha test/spec/unit/*.spec.js -w",
     "test:single": "istanbul cover _mocha -- -R spec test/spec/unit/*.spec.js",
     "check-coverage": "istanbul check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
-    "report-coverage": "cat ./coverage/coverage-final.json | codecov",
+    "report-coverage": "cat ./coverage/coverage.raw.json | codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "license": "MIT",
